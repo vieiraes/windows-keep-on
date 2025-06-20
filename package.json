@@ -1,15 +1,30 @@
 {
-  "name": "windows-keep-on",
-  "version": "1.0.0",
+  "name": "wko",
+  "productName": "WKO",
+  "version": "0.1.0",
   "description": "Keep Windows awake preventing screen saver/sleep mode",
   "main": "./src/main.js",
   "scripts": {
     "start": "electron .",
-    "build": "electron-builder --win --x64"
+    "build": "electron-builder --win --x64",
+    "pack": "electron-builder --dir"
   },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:vieiraes/windows-keep-on.git"
+  },
+  "keywords": [
+    "windows",
+    "keep-awake",
+    "screen-saver",
+    "system-tray",
+    "electron"
+  ],
+  "author": "Bruno Vieira - vieiraes.net",
+  "license": "MIT",
   "build": {
-    "productName": "WindowsKeepOn",
-    "appId": "net.vieiraes",
+    "productName": "WKO",
+    "appId": "net.vieiraes.wko",
     "win": {
       "target": [
         {
@@ -19,16 +34,17 @@
           ]
         }
       ],
-      "icon": "src/assets/icon.png"
+      "icon": "build/icon.ico"
     },
     "directories": {
       "output": "dist"
     }
   },
-  "author": "Bruno Vieira",
-  "license": "ISC",
   "devDependencies": {
-    "electron": "^latest",
-    "electron-builder": "^latest"
+    "electron": "^26.0.0",
+    "electron-builder": "^24.6.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
